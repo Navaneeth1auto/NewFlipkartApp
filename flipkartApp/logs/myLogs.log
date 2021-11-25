@@ -1,0 +1,26 @@
+[ERROR] 2021-10-20 12:26:29.494 [main] BaseClass - logger error
+[ERROR] 2021-10-20 12:27:44.431 [main] BaseClass - logger error
+[INFO ] 2021-10-20 12:29:03.932 [main] BaseClass - in before suit of logger
+[INFO ] 2021-10-20 12:29:14.731 [main] BaseClass - in test
+[ERROR] 2021-10-20 12:29:14.739 [main] BaseClass - logger error
+[INFO ] 2021-10-20 12:39:57.793 [main] BaseClass - in before suit of logger
+[INFO ] 2021-10-20 12:40:39.338 [main] BaseClass - in before suit of logger
+[INFO ] 2021-10-20 12:40:56.903 [main] BaseClass - ValidatingTheMouseOverFunctionality
+[INFO ] 2021-10-20 14:22:03.611 [main] BaseClass - in before suit of logger
+[INFO ] 2021-10-20 14:25:28.149 [main] BaseClass - in before suit of logger
+[INFO ] 2021-10-20 14:26:45.704 [main] BaseClass - in before suit of logger
+[INFO ] 2021-10-20 14:28:54.203 [main] BaseClass - in before suit of logger
+[INFO ] 2021-10-20 14:34:56.588 [main] BaseClass - in before suit of logger
+[INFO ] 2021-10-20 14:40:19.805 [main] BaseClass - in before suit of logger
+[INFO ] 2021-10-20 14:46:18.387 [main] BaseClass - in before suit of logger
+[INFO ] 2021-10-20 14:47:53.748 [main] BaseClass - in before suit of logger
+[INFO ] 2021-10-20 14:51:43.405 [main] BaseClass - in before suit of logger
+[INFO ] 2021-10-20 14:51:54.703 [main] BaseClass - test1
+[INFO ] 2021-10-20 14:51:54.719 [main] BaseClass - test2
+[INFO ] 2021-10-20 14:51:54.727 [main] BaseClass - test3
+[INFO ] 2021-10-20 14:51:54.743 [main] BaseClass - test4
+[INFO ] 2021-10-20 15:05:13.005 [main] BaseClass - in before suit of logger
+[INFO ] 2021-10-20 15:05:33.332 [main] BaseClass - test1
+[INFO ] 2021-10-20 15:05:33.380 [main] BaseClass - test2
+[INFO ] 2021-10-20 15:05:33.388 [main] BaseClass - test3
+[INFO ] 2021-10-20 15:05:33.404 [main] BaseClass - test4
