@@ -1,5 +1,8 @@
 package utilityFolder;
 
+import java.util.function.Function;
+
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -9,6 +12,7 @@ import baseFolder.BaseClass;
 
 public class WaitClass extends BaseClass{
 	WebDriverWait wait;
+	JavascriptExecutor js;
 	public WaitClass(WebDriver driver) {
 		wait=new WebDriverWait(driver, 10);
 	}
@@ -23,5 +27,12 @@ public class WaitClass extends BaseClass{
 	
 	public void elementIsDisplayed(WebElement element) {                   //  Is Displayed 
 		wait.until(ExpectedConditions.visibilityOf(element));
+	}
+	
+	public void waitForPageLoad() {
+		
+		//wait.until( js.executeScript("return document.readyState !== 'loading'"));
+		//wait.until(d -> ((JavascriptExecutor) d).executeScript("return document.readyState !== 'loading'"));
+		wait.until(d -> ((JavascriptExecutor) d).executeScript("return (document.readyState === 'complete' || document.readyState === 'interactive')"));
 	}
 }

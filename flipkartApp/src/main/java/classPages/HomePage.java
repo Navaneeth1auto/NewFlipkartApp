@@ -1,5 +1,8 @@
 package classPages;
 
+import java.util.Iterator;
+import java.util.List;
+
 import org.apache.logging.log4j.LogManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -23,9 +26,19 @@ public class HomePage extends BaseClass{
 			wait=new WaitClass(driver);
 			action=new ActionClass(driver);
 		}
-
+		
+		@FindBy(how=How.XPATH, using="//img[@title='Flipkart']")
+		WebElement flipkart_Logo;													// Flipkart LOGO
+		
 		@FindBy(how=How.XPATH, using="//div[text()='Electronics']")                 // Electronics option in Header prosition
 		WebElement electronicsHeader;
+		
+		@FindBy(how=How.XPATH, using="//div[text()='Electronics']/parent::div/following-sibling::div/descendant::div[5]/a")    
+		List<WebElement> mainSuggestionsInElectronis;										// First half of suggestion in Electronics
+		
+		@FindBy(how=How.XPATH, using="//div[text()='Electronics']/parent::div/following-sibling::div/descendant::div[6]/a")    
+		List<WebElement> subSuggestionsInElectronis;										// second half of suggestion in Electronics
+		
 		
 		@FindBy(how=How.XPATH, using="//div[@class='eFQ30H']/descendant::div[text()='Top Offers']")    // Top Offers option in header
 		WebElement topOfferHeader;
@@ -61,6 +74,29 @@ public class HomePage extends BaseClass{
 			log.info("in mouseOverOnElectricalsHeader ");
 			wait.elementClickable(electronicsHeader);
 			action.mouseOver(electronicsHeader);
+		}
+		
+		public void mainSuggestionsFromElectronis() throws Throwable {
+			System.out.println("size: "+mainSuggestionsInElectronis.size());
+			int mainSize=mainSuggestionsInElectronis.size();
+			for(int i=0;i<mainSize;i++) {
+				WebElement mainElement=mainSuggestionsInElectronis.get(i);
+				action.mouseOver(mainElement);
+				int subSize=subSuggestionsInElectronis.size();
+				for(int j=0;j<subSize;j++) {
+					WebElement subElement=subSuggestionsInElectronis.get(j);
+					subElement.click();
+					Thread.sleep(2000);
+					System.out.println(driver.getTitle());
+					Thread.sleep(1500);
+					flipkart_Logo.click();
+					Thread.sleep(500);
+					action.mouseOver(electronicsHeader);
+					WebElement element=mainSuggestionsInElectronis.get(i);
+					action.mouseOver(element);
+				}
+			}
+			
 		}
 		
 		public void clickOnTopOfferHeader() {							// method for clicking on Top Offer

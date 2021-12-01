@@ -3,14 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="grocery.ValidatingGrocery">
+      <class name="home_furniture.VerifingTheOptionsInSuggestions">
         <methods>
-          <include name="clickOnGrocery"/>
           <include name="openApplication"/>
-          <include name="selectingItemsFromHouseHold"/>
+          <include name="mouseOverElectronics"/>
           <include name="init"/>
+          <include name="validatingResultsOfSuggestions"/>
         </methods>
-      </class> <!-- grocery.ValidatingGrocery -->
+      </class> <!-- home_furniture.VerifingTheOptionsInSuggestions -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

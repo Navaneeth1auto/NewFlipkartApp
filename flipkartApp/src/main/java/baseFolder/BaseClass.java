@@ -11,6 +11,7 @@ import org.apache.logging.log4j.Logger;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Listeners;
@@ -34,7 +35,7 @@ public class BaseClass {
 		log=LogManager.getLogger();
 		obj=new Properties();
 		try {
-			fis=new FileInputStream("C:\\Users\\Navaneeth\\QA_Tester\\Tester2\\flipkartApp\\credentials.properties");
+			fis=new FileInputStream("E:\\Git_local_repo\\flipkartApp\\credentials.properties");
 		} catch (FileNotFoundException e) {
 			System.out.println("FileNotFoundException catch");
 			e.printStackTrace();
@@ -61,6 +62,7 @@ public class BaseClass {
 		try {
 		login.clickClosebtn();
 		log.info(" login screen displayed");
+	
 		}
 		catch (Exception e) {
 			System.out.println("No login screen displayed");
